@@ -1,4 +1,4 @@
-https://gnlwjd231.github.io/peterProject01/
+https://gnlwjd231.github.io/petnerProject02/
 
 HTML5 / CSS3 / JS / jQuery 사용
 <br />
