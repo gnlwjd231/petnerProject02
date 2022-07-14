@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>펫트너 | 건강검진 관리자 페이지</title>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="/index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside>
+        <div class="section-header border-b">
+          <h2>건강검진 관리자 페이지</h2>
+        </div>
+        <div class="user-info border-b">
+          <div class="user-img"></div>
+          <div class="user-name"><h2>양지동물병원</h2><button><i class="fa-solid fa-chevron-down"></i></button></div>
+        </div>
+        <nav>
+          <h3>건강검진 관리하기</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <h4>홈</h4>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              <h4>예약</h4>
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar"></i>
+              <h4>스케쥴</h4>
+            </li>
+            <li>
+              <i class="fa-solid fa-file-lines"></i>
+              <h4>검진결과</h4>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="main wrapper">
+        <div class="main container">
+          <header>
+            <button class="white br-50">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+              뒤로돌아가기
+            </button>
+            <h1>검진항목 수정</h1>
+          </header>
+          <section>
+            <div class="section-header border-b">
+              <h2>기본정보</h2>
+            </div>
+            <form>
+              <div>
+                <div class="input-container">
+                  <label for="examinationArea">검진영역</label>
+                  <select
+                    class="form-select input"
+                    aria-label="Default select example"
+                    name="examinationArea"
+                  >
+                    <option selected>신체검사2</option>
+                    <option value="1">치아</option>
+                    <option value="2">엑스레이</option>
+                    <option value="3">기타</option>
+                  </select>
+                </div>
+                <div class="input-container">
+                  <label for="specificArea">부위</label>
+                  <select
+                    class="form-select input"
+                    aria-label="Default select example"
+                    name="specificArea"
+                  >
+                    <option selected>귀</option>
+                    <option value="1">치아</option>
+                    <option value="2">엑스레이</option>
+                    <option value="3">기타</option>
+                  </select>
+                </div>
+                <div class="input-container">
+                  <label for="testItem">검사항목</label>
+                  <input class="input" name="testItem" />
+                </div>
+              </div>
+              <div>
+                <div class="input-container border-b">
+                  <label>공개여부</label>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        공개
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        비공개
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-container border-b">
+                  <label>성별구분</label>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="sex"
+                        id="sex1"
+                      />
+                      <label class="form-check-label" for="sex1"> 무관 </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="sex"
+                        id="sex2"
+                        checked
+                      />
+                      <label class="form-check-label" for="sex2"> 암컷 </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="sex"
+                        id="sex3"
+                        checked
+                      />
+                      <label class="form-check-label" for="sex3"> 수컷 </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="sex"
+                        id="sex4"
+                        checked
+                      />
+                      <label class="form-check-label" for="sex4">
+                        암컷(중성화)
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="sex"
+                        id="sex5"
+                        checked
+                      />
+                      <label class="form-check-label" for="sex5">
+                        수컷(중성화)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+
+          <section class="dobble-layout">
+            <div>
+              <div class="section-header">
+                <h2>결과 선택 입력방식</h2>
+              </div>
+              <div class="section-body">
+                <div class="button-radio-container">
+                  <input type="radio" class="btn-check" name="selectType" id="selectTypeButton" autocomplete="off" checked>
+                  <label class="btn button-radio" for="selectTypeButton">버튼선택</label>
+                  <input type="radio" class="btn-check" name="selectType" id="selectTypeNumber" autocomplete="off">
+                  <label class="btn  button-radio" for="selectTypeNumber">숫자입력</label>
+                  <input type="radio" class="btn-check" name="selectType" id="selectTypePicture" autocomplete="off">
+                  <label class="btn button-radio" for="selectTypePicture">사진만 게시</label>
+                </div>
+                <h3 class="bold">복수선택 여부</h3>
+                <div class="button-radio-container">
+                  <input type="radio" class="btn-check" name="pluralChoices" id="pluralChoicesTrue" autocomplete="off" checked>
+                  <label class="btn button-radio" for="pluralChoicesTrue">복수선택 가능</label>
+                  <input type="radio" class="btn-check" name="pluralChoices" id="pluralChoicesFalse" autocomplete="off">
+                  <label class="btn  button-radio" for="pluralChoicesFalse">복수선택 불가능</label>
+                </div>
+              </div>
+            </div>
+          
+            <div>
+              <div class="section-header border-b">
+                <h2>설정</h2>
+              </div>
+              <div>
+                <div class="input-container border-b">
+                  <label>사진첨부</label>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="picture-included"
+                        id="picture-included-true"
+                      />
+                      <label class="form-check-label" for="picture-included-true">
+                        생성
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="picture-included"
+                        id="picture-included-false"
+                        checked
+                      />
+                      <label class="form-check-label" for="picture-included-false">
+                        생성안함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-container border-b">
+                  <label>기타항목</label>
+                  <div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="etc-item"
+                        id="etc-item-true"
+                        checked
+                      />
+                      <label class="form-check-label" for="etc-item-true">
+                        생성
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="etc-item"
+                        id="etc-item-false"
+                      />
+                      <label class="form-check-label" for="etc-item-false">
+                        생성안함
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="table-layout">
+          <div class="section-header ">
+            <h2>결과 선택 항목입력</h2>
+          </div>
+          <div class="section-button-container">
+            <button class="blue-border br-12"><i class="fa-solid fa-plus"></i>추가</button>
+          </div>
+          <div>
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">순서</th>
+                    <th scope="col">옵션명</th>
+                    <th scope="col">최소치</th>
+                    <th scope="col">최대치</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">코멘트</th>
+                    <th scope="col"><br/></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b">
+                    <th scope="row">1</th>
+                    <td>정상 (80 - 150 mmhg)</td>
+                    <td>37.9</td>
+                    <td>150</td>
+                    <td><span class="badge rounded-pill text-bg-success">정상</span></td>
+                    <td class="comment-textarea"><textarea type="text" class="input" placeholder="코멘트를 입력해주세요"></textarea><i class="fa-solid fa-pen"></i></td>
+                    <td><i class="fa-solid fa-trash"></i></td>
+                  </tr>
+                  <tr class="border-b">
+                    <th scope="row">2</th>
+                    <td>150 - 180 mmhg</td>
+                    <td>150</td>
+                    <td>180</td>
+                    <td><span class="badge rounded-pill text-bg-warning">주의</span></td>
+                    <td class="comment-textarea"><textarea type="text" class="input" placeholder="코멘트를 입력해주세요"></textarea><i class="fa-solid fa-pen"></i></td>
+                    <td><i class="fa-solid fa-trash"></i></td>
+                  </tr>
+                  <tr class="border-b">
+                    <th scope="row">1</th>
+                    <td>고체온 (39.5도 -  40.5)</td>
+                    <td>180</td>
+                    <td>999</td>
+                    <td><span class="badge rounded-pill text-bg-danger">위험</span></td>
+                    <td class="comment-textarea"><textarea type="text" class="input" placeholder="코멘트를 입력해주세요"></textarea><i class="fa-solid fa-pen"></i></td>
+                    <td><i class="fa-solid fa-trash"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <div class="savebtn-container">
+          <button class="grey br-12">저장하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
