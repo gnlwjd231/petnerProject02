@@ -7,7 +7,6 @@ $(document).ready(function () {
       $(this).height() + absoluteTop >
       $(".savebtn-container > button").position().top + 10
     ) {
-      console.log("넘어갔다");
       $(this).height(
         $(".savebtn-container > button").position().top + 10 - absoluteTop
       );
@@ -16,8 +15,6 @@ $(document).ready(function () {
       $(this).height() + absoluteTop + 1 <
       $(".savebtn-container > button").position().top + 10
     ) {
-      console.log(this.scrollHeight);
-      console.log("작다");
       $(this).css("overflow-y", "hidden");
       $(this).height(0);
       $(this).height(this.scrollHeight - 35);
